@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HauntWeb Studio | Pricing</title>
+    <title>Shop | HauntWeb Studio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
-        <h1>HauntWeb</h1>
+        <h1>HauntWeb Studio</h1>
 
         <nav>
             <button id="menu-toggle">
@@ -26,119 +25,115 @@
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="care.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO -->
-    <section class="hero fade-in">
-        <div class="container">
-            <h2>Simple Pricing. Real Results.</h2>
-            <p>Choose a plan and start your website. You’ll get a free homepage preview before paying.</p>
-        </div>
+    <section class="hero">
+        <h2>Choose Your Website Plan</h2>
+        <p>
+            Start with a free homepage preview. Only pay when you're ready.
+        </p>
     </section>
 
     <main>
 
         <!-- PRICING -->
-        <section class="fade-in">
-            <div class="container">
-                <h2>Website Plans</h2>
+        <section class="products">
+            <h2>Plans</h2>
 
-                <div class="pricing-grid">
+            <div class="pricing-grid">
 
-                    <!-- STARTER -->
-                    <div class="pricing-card">
-                        <h3>Starter</h3>
-                        <p class="price">$150</p>
+                <!-- STARTER -->
+                <article class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">$150</p>
 
-                        <ul>
-                            <li>✔ 1 to 2 Pages</li>
-                            <li>✔ Mobile Friendly</li>
-                            <li>✔ Square Payment Links</li>
-                            <li>✔ Fast Delivery</li>
-                        </ul>
+                    <ul>
+                        <li>✔ 1 Page Website</li>
+                        <li>✔ Mobile Friendly</li>
+                        <li>✔ Contact Form</li>
+                        <li>✔ Simple Square checkout links</li>
+                    </ul>
 
-                        <button class="btn" onclick="selectPlan('Starter')">
-                            Choose Plan
-                        </button>
-                    </div>
+                    <button onclick="selectPlan('Starter Plan')">Choose Plan</button>
+                </article>
 
-                    <!-- BUSINESS -->
-                    <div class="pricing-card featured">
-                        <h3>Business</h3>
-                        <p class="price">$300</p>
+                <!-- BUSINESS -->
+                <article class="pricing-card featured">
+                    <h3>Business</h3>
+                    <p class="price">$300</p>
 
-                        <ul>
-                            <li>✔ Up to 5 Pages</li>
-                            <li>✔ Better Design + Layout</li>
-                            <li>✔ SEO Basics</li>
-                            <li>✔ Square Integration</li>
-                        </ul>
+                    <ul>
+                        <li>✔ Up to 4 Pages</li>
+                        <li>✔ Modern Layout</li>
+                        <li>✔ Contact + Inquiry Forms</li>
+                        <li>✔ Simple Square checkout links</li>
+                    </ul>
 
-                        <button class="btn" onclick="selectPlan('Business')">
-                            Choose Plan
-                        </button>
-                    </div>
+                    <button onclick="selectPlan('Business Plan')">Choose Plan</button>
+                </article>
 
-                    <!-- PREMIUM -->
-                    <div class="pricing-card">
-                        <h3>Premium</h3>
-                        <p class="price">$500+</p>
+                <!-- PREMIUM -->
+                <article class="pricing-card">
+                    <h3>Premium</h3>
+                    <p class="price">$500+</p>
 
-                        <ul>
-                            <li>✔ Custom Everything</li>
-                            <li>✔ Advanced Animations</li>
-                            <li>✔ Full Brand Feel</li>
-                            <li>✔ Priority Support</li>
-                        </ul>
+                    <ul>
+                        <li>✔ Multi-page Website</li>
+                        <li>✔ Custom Features</li>
+                        <li>✔ Priority Build Time</li>
+                        <li>✔ Simple Square checkout links</li>
+                    </ul>
 
-                        <button class="btn" onclick="selectPlan('Premium')">
-                            Choose Plan
-                        </button>
-                    </div>
+                    <button onclick="selectPlan('Premium Plan')">Choose Plan</button>
+                </article>
 
-                </div>
             </div>
+
+            <p style="margin-top: 20px; color: #aaa;">
+                You’ll receive a free homepage preview before any payment is required.
+            </p>
         </section>
 
         <!-- FORM -->
-        <section class="fade-in">
-            <div class="container">
-                <h2>Start Your Project</h2>
-                <p>Fill this out and I’ll build your free homepage preview.</p>
+        <section>
+            <h2>Start Your Project</h2>
 
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            <p id="selected-plan-text" style="margin-bottom: 10px; color: #fff;"></p>
 
-                    <input type="hidden" name="plan" id="selected-plan">
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
 
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                <!-- hidden selected plan -->
+                <input type="hidden" name="Selected Plan" id="selected-plan">
 
-                    <input type="text" name="business" placeholder="Business Name">
+                <label>Name</label><br>
+                <input type="text" name="name" placeholder="Your name" required><br><br>
 
-                    <textarea name="details" rows="5" placeholder="What kind of website do you want?"
-                        required></textarea>
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="Your email" required><br><br>
 
-                    <button type="submit" class="btn">Submit Request</button>
-                </form>
-            </div>
+                <label>Business Name</label><br>
+                <input type="text" name="business" placeholder="Your business name"><br><br>
+
+                <label>Project Details</label><br>
+                <textarea name="message" rows="5" placeholder="What kind of website do you need?"></textarea><br><br>
+
+                <button type="submit">Send Request</button>
+            </form>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 HauntWeb Studio</p>
     </footer>
 
-    <!-- BACK TO TOP -->
-    <button id="back-to-top">↑</button>
-
-    <!-- SCRIPT -->
     <script>
+        /* MOBILE NAV */
         const toggle = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
         const overlay = document.getElementById("menu-overlay");
@@ -155,40 +150,20 @@
             overlay.classList.remove("active");
         });
 
-        // PLAN SELECT
+        /* PLAN SELECT */
         function selectPlan(plan) {
+            // set hidden input
             document.getElementById("selected-plan").value = plan;
 
+            // show user feedback
+            document.getElementById("selected-plan-text").textContent =
+                "Selected Plan: " + plan;
+
+            // scroll to form
             document.querySelector(".contact-form").scrollIntoView({
                 behavior: "smooth"
             });
         }
-    </script>
-
-    <script>
-        const backToTop = document.getElementById("back-to-top");
-
-        window.addEventListener("scroll", () => {
-            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-        });
-
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    </script>
-
-    <script>
-        const elements = document.querySelectorAll(".fade-in");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-            });
-        });
-
-        elements.forEach(el => observer.observe(el));
     </script>
 
 </body>
