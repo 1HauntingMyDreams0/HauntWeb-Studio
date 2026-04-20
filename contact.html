@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | HauntWeb Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>HauntWeb Studio</h1>
+
+        <nav>
+            <button id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div id="menu-overlay"></div>
+
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Start Your Website</h2>
+        <p>
+            Tell me about your project and I’ll build you a free homepage preview before any payment.
+        </p>
+    </section>
+
+    <main>
+
+        <!-- CONTACT FORM -->
+        <section class="products">
+            <h2>Project Request</h2>
+
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+
+                <label>Name</label><br>
+                <input type="text" name="name" placeholder="Your name" required><br><br>
+
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="Your email" required><br><br>
+
+                <label>Business Name</label><br>
+                <input type="text" name="business" placeholder="Your business name"><br><br>
+
+                <label>What do you need?</label><br>
+                <select name="project-type">
+                    <option value="">Select an option</option>
+                    <option value="New Website">New Website</option>
+                    <option value="Landing Page">Landing Page</option>
+                    <option value="Not Sure Yet">Not Sure Yet</option>
+                </select><br><br>
+
+                <label>Budget Range</label><br>
+                <select name="budget">
+                    <option value="">Select budget</option>
+                    <option value="$150 - Starter">Starter ($150)</option>
+                    <option value="$300 - Business">Business ($300)</option>
+                    <option value="$500+ - Premium">Premium ($500+)</option>
+                    <option value="Not Sure">Not Sure</option>
+                </select><br><br>
+
+                <label>
+                    <input type="checkbox" name="Maintenance Interest" value="Yes">
+                    I'm interested in monthly maintenance
+                </label>
+                <br><br>
+
+                <label>Project Details</label><br>
+                <textarea name="message" rows="5"
+                    placeholder="Describe your business and what you want your website to do..."></textarea><br><br>
+
+                <button type="submit">Send Request</button>
+
+            </form>
+        </section>
+
+        <!-- PROCESS -->
+        <section>
+            <h2>What Happens Next?</h2>
+
+            <ol>
+                <li>I review your request</li>
+                <li>You receive a free homepage preview</li>
+                <li>We make any changes you want</li>
+                <li>Once approved, you complete payment through Square</li>
+                <li>Your full site gets built and launched</li>
+            </ol>
+        </section>
+
+        <!-- TRUST -->
+        <section>
+            <h2>No Pressure, No Hidden Fees</h2>
+
+            <p>
+                You won’t be charged anything upfront. You only pay if you like the preview and want to move forward.
+            </p>
+
+            <p>
+                Monthly maintenance is optional and clearly priced — no surprises.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HauntWeb Studio</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("menu-overlay");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            toggle.classList.remove("active");
+            menu.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    </script>
+
+</body>
+
+</html>
