@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HauntWeb Studio | Custom Websites</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>HauntWeb</h1>
+
+        <nav aria-label="Main navigation">
+
+            <button id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div id="menu-overlay"></div>
+
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero fade-in">
+        <div class="container">
+            <h2>Websites That Bring Customers to Your Door</h2>
+            <p>
+                Custom-built websites designed to connect seamlessly with Square for secure,
+                hassle-free payments. Clean, fast, and built to convert.
+            </p>
+
+            <a href="#" class="btn">Start Your Website</a>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ================= FEATURE ================= -->
+        <section class="products fade-in">
+            <div class="container">
+                <h2>Featured Service</h2>
+
+                <article>
+                    <h3>Starter Website Package</h3>
+
+                    <img src="IMG/placeholder.jpg" alt="Website preview">
+
+                    <p>
+                        A clean, professional website built from scratch to showcase your business
+                        and guide customers directly to your Square checkout.
+                    </p>
+
+                    <p><strong>Starting at $150</strong></p>
+
+                    <a href="#" class="btn">Request This</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= BENEFITS ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>What You Get</h2>
+
+                <ul>
+                    <li>✔ Custom-coded website (no templates)</li>
+                    <li>✔ Mobile-first responsive design</li>
+                    <li>✔ Fast loading performance</li>
+                    <li>✔ Direct Square payment integration</li>
+                    <li>✔ Clean UX focused on conversions</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= PAYMENTS ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>Simple Payments</h2>
+
+                <p>
+                    Your site connects directly to your Square checkout or store.
+                    Customers click, pay, and you're done.
+                </p>
+
+                <p>No logins, no confusion — just a smooth buying experience.</p>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>About</h2>
+
+                <p>
+                    HauntWeb Studio builds modern, high-converting websites for small businesses
+                    and independent creators.
+                </p>
+
+                <p>
+                    The focus is simple: clean design, fast performance, and turning visitors into customers.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= PROCESS ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>How It Works</h2>
+
+                <ol>
+                    <li>Tell me what you need</li>
+                    <li>I design & build your site</li>
+                    <li>We connect your Square links</li>
+                    <li>You launch and start selling</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ================= REVIEWS ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>Client Reviews</h2>
+
+                <div class="reviews-box">
+                    <p>No reviews yet.</p>
+                    <p>Be one of the first to get your business online.</p>
+
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="fade-in">
+            <div class="container">
+                <h2>Ready to Launch?</h2>
+                <p>Let’s build a website that actually works.</p>
+
+                <a href="#" class="btn">Start Your Project</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>&copy; 2026 HauntWeb Studio</p>
+    </footer>
+
+    <!-- ================= BACK TO TOP ================= -->
+    <button id="back-to-top">↑</button>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const overlay = document.getElementById("menu-overlay");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        overlay.addEventListener("click", () => {
+            toggle.classList.remove("active");
+            menu.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    </script>
+
+    <script>
+        const backToTop = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    <script>
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
