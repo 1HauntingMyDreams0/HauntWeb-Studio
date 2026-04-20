@@ -517,3 +517,25 @@ SCROLL ANIMATION
     background: #111;
     color: #fff;
 }
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-card {
+    background: #0a0a0a;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card img {
+    width: 100%;
+    border-radius: 8px;
+}
