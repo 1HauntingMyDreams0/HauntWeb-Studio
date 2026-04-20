@@ -25,7 +25,7 @@ body {
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    animation: moveGrid 5s linear infinite;
+    animation: moveGrid 8s linear infinite;
 }
 
 @keyframes moveGrid {
@@ -86,6 +86,7 @@ header {
 
     background: rgba(10, 10, 10, 0.7);
     backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -134,8 +135,11 @@ HERO
     font-size: 2.6rem;
 
     background: linear-gradient(90deg, #fff, #888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+        -webkit-background-clip: text;
+    
+        color: transparent;
+        -webkit-text-fill-color: transparent;
 
     margin-bottom: 15px;
 }
@@ -156,6 +160,7 @@ PRODUCT CARD
     border: 1px solid rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
     transition: 0.3s ease;
 }
@@ -231,6 +236,10 @@ BUTTONS (PREMIUM)
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.btn:active {
+    transform: scale(0.97);
 }
 
 /* =========================
